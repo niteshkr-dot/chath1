@@ -180,7 +180,7 @@ document.getElementById("languageBtn").addEventListener("click", function () {
 // Yahan apne festival ki date aur time set karein.
 // Date format: YYYY-MM-DDTHH:MM:SS+05:30
 
-const CHHATH_DATE = "2026-11-14T00:00:00+05:30";
+const CHHATH_DATE = "2026-11-15T00:00:00+05:30";
 
 const targetDate = new Date(CHHATH_DATE).getTime();
 
