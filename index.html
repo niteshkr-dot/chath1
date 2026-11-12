@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8b350d">
+    <title>जय छठी मैया | छठ महापर्व</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-sun">☀️</div>
+        <h2>जय छठी मैया</h2>
+        <p>आपका स्वागत है...</p>
+    </div>
+
+    <!-- Animation Layers -->
+    <div id="flowers" class="flowers"></div>
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Welcome Page -->
+    <section id="introPage" class="intro-page">
+        <div class="intro-card">
+            <div class="intro-sun">☀️</div>
+            <p>आस्था • पवित्रता • भक्ति</p>
+            <h1>जय छठी मैया</h1>
+            <h2>छठ महापर्व 2026</h2>
+            <p class="intro-description">
+                सूर्य उपासना और लोक आस्था के महापर्व में
+                आप सभी का हार्दिक स्वागत है।
+            </p>
+            <button id="startBtn" class="primary-btn">
+                🙏 पूजा आरंभ करें
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Website -->
+    <main id="mainPage" class="hidden">
+
+        <!-- Navigation -->
+        <header class="navbar">
+            <a href="#home" class="logo">🌞 जय छठी मैया</a>
+
+            <div class="nav-actions">
+                <button id="languageBtn" class="small-btn">English</button>
+                <button id="themeBtn" class="small-btn">🌙</button>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="hero-sun"></div>
+            <div class="hero-content reveal">
+                <span class="hero-label">पावन छठ महापर्व</span>
+                <h1 data-hi="छठ महापर्व की हार्दिक शुभकामनाएँ" data-en="Happy Chhath Mahaparv">
+                    छठ महापर्व की हार्दिक शुभकामनाएँ
+                </h1>
+                <p data-hi="जय छठी मैया • जय सूर्य देव" data-en="Jai Chhathi Maiya • Jai Surya Dev">
+                    जय छठी मैया • जय सूर्य देव
+                </p>
+                <a href="#countdown" class="primary-btn hero-link">
+                    पर्व की तैयारी देखें
+                </a>
+            </div>
+            <div class="hero-water"></div>
+        </section>
+
+        <!-- Countdown -->
+        <section id="countdown" class="section reveal">
+            <span class="section-tag">🌅 शुभ अवसर</span>
+            <h2>छठ पूजा काउंटडाउन</h2>
+            <p>महापर्व के आने में बाकी समय</p>
+
+            <div class="countdown">
+                <div><span id="days">00</span><small>दिन</small></div>
+                <div><span id="hours">00</span><small>घंटे</small></div>
+                <div><span id="minutes">00</span><small>मिनट</small></div>
+                <div><span id="seconds">00</span><small>सेकंड</small></div>
+            </div>
+            <p class="note">
+                तारीख बदलने के लिए script.js में CHHATH_DATE देखें।
+            </p>
+        </section>
+
+        <!-- About -->
+        <section class="section about-section reveal">
+            <span class="section-tag">🙏 हमारी परंपरा</span>
+            <h2>छठ पूजा का महत्व</h2>
+            <p>
+                छठ पूजा सूर्य देव और छठी मैया को समर्पित पवित्र लोकपर्व है।
+                इस पर्व में व्रती पवित्रता और श्रद्धा के साथ उपवास रखते हैं
+                तथा डूबते और उगते सूर्य को अर्घ्य अर्पित करते हैं।
+                यह पर्व प्रकृति, परिवार, स्वास्थ्य और आस्था के प्रति
+                कृतज्ञता प्रकट करने का अवसर है।
+            </p>
+        </section>
+
+        <!-- Four Days -->
+        <section class="section reveal">
+            <span class="section-tag">🌼 चार दिवसीय पर्व</span>
+            <h2>छठ पूजा के चार दिन</h2>
+
+            <div class="days-grid">
+                <article class="day-card">
+                    <span>🌿</span>
+                    <h3>नहाय-खाय</h3>
+                    <p>स्नान, शुद्धता और सात्विक भोजन से पर्व की शुरुआत।</p>
+                </article>
+
+                <article class="day-card">
+                    <span>🍯</span>
+                    <h3>खरना</h3>
+                    <p>पूजा के बाद प्रसाद ग्रहण और निर्जला व्रत का आरंभ।</p>
+                </article>
+
+                <article class="day-card">
+                    <span>🌇</span>
+                    <h3>संध्या अर्घ्य</h3>
+                    <p>डूबते सूर्य को अर्घ्य अर्पित किया जाता है।</p>
+                </article>
+
+                <article class="day-card">
+                    <span>🌅</span>
+                    <h3>उषा अर्घ्य</h3>
+                    <p>उगते सूर्य को अर्घ्य देकर व्रत का पारण किया जाता है।</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Puja Checklist -->
+        <section class="section reveal">
+            <span class="section-tag">🧺 तैयारी</span>
+            <h2>पूजा सामग्री Checklist</h2>
+            <p>सामान तैयार होने पर टिक लगाएँ।</p>
+
+            <div class="checklist" id="pujaChecklist">
+                <label><input type="checkbox"> बाँस का सूप / दउरा</label>
+                <label><input type="checkbox"> नारियल</label>
+                <label><input type="checkbox"> केला और मौसमी फल</label>
+                <label><input type="checkbox"> गन्ना</label>
+                <label><input type="checkbox"> ठेकुआ</label>
+                <label><input type="checkbox"> चावल और गेहूँ</label>
+                <label><input type="checkbox"> गुड़ और घी</label>
+                <label><input type="checkbox"> दूध</label>
+                <label><input type="checkbox"> दीपक और रूई</label>
+                <label><input type="checkbox"> धूप / अगरबत्ती</label>
+                <label><input type="checkbox"> कलश और जल</label>
+                <label><input type="checkbox"> फूल और माला</label>
+                <label><input type="checkbox"> लाल / पीला वस्त्र</label>
+                <label><input type="checkbox"> पान और सुपारी</label>
+                <label><input type="checkbox"> मिठाई / प्रसाद</label>
+                <label><input type="checkbox"> पूजा की थाली</label>
+                <label><input type="checkbox"> साफ आसन</label>
+                <label><input type="checkbox"> अर्घ्य के लिए दूध और जल</label>
+            </div>
+            <p id="checkProgress" class="progress-text">0 / 8 सामान तैयार</p>
+        </section>
+        <section id="recipes" class="section">
+            <span class="eyebrow">पारंपरिक प्रसाद</span>
+            <h2>प्रसाद रेसिपी</h2>
+            <div class="cards">
+                <article class="card"><span>🍪</span>
+                    <h3>ठेकुआ</h3>
+                    <p><b>सामग्री:</b> गेहूँ का आटा, गुड़, घी, सौंफ और पानी।</p>
+                    <p><b>विधि:</b> गुड़ घोलें, आटे में घी-सौंफ मिलाकर सख्त आटा गूँथें। आकार देकर धीमी आँच पर सुनहरा
+                        तलें।</p>
+                </article>
+                <article class="card"><span>🥛</span>
+                    <h3>गुड़ की खीर</h3>
+                    <p><b>सामग्री:</b> चावल, दूध, गुड़ और इलायची।</p>
+                    <p><b>विधि:</b> दूध में चावल पकाएँ। आँच बंद करके थोड़ा ठंडा करें, फिर गुड़ और इलायची मिलाएँ।</p>
+                </article>
+                <article class="card"><span>🍚</span>
+                    <h3>कसार</h3>
+                    <p><b>सामग्री:</b> चावल का आटा, गुड़ / चीनी और घी।</p>
+                    <p><b>विधि:</b> आटे को हल्का भूनें, घी और गुड़ मिलाकर छोटे लड्डू बनाएँ।</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Bhajan Player -->
+        <section class="section music-section reveal">
+            <span class="section-tag">🎵 भक्ति संगीत</span>
+            <h2>छठ पूजा Bhajan Player</h2>
+
+            <div class="music-disc">🎶</div>
+            <p id="songName">छठ पूजा भक्ति गीत</p>
+
+            <div class="music-controls">
+                <button id="prevSong" class="round-btn">⏮</button>
+                <button id="musicBtn" class="round-btn play-btn">▶</button>
+                <button id="nextSong" class="round-btn">⏭</button>
+            </div>
+
+            <!--<p class="note">अपनी MP3 फाइलें assets फोल्डर में रखें।</p>-->
+
+            <div class="sound-buttons">
+                <button id="bellBtn" class="secondary-btn">🔔 घंटी</button>
+                <button id="shankhBtn" class="secondary-btn">🐚 शंख</button>
+            </div>
+        </section>
+
+        <!-- Virtual Ghat -->
+        <section class="virtual-ghat" id="virtual-ghat">
+            <h2>🌞 छठ घाट का दिव्य दृश्य</h2>
+            <p>संध्या अर्घ्य और उषा अर्घ्य का दृश्य देखें</p>
+
+            <div class="ghat-buttons">
+                <button onclick="showGhat('evening')" id="eveningBtn" class="active">
+                    🌇 संध्या अर्घ्य
+                </button>
+
+                <button onclick="showGhat('morning')" id="morningBtn">
+                    🌅 उषा अर्घ्य
+                </button>
+            </div>
+
+            <div class="ghat-scene evening-scene" id="ghatScene">
+                <div class="sun"></div>
+                <div class="river"></div>
+                <div class="reflection"></div>
+            </div>
+
+            <h3 id="ghatTitle">🌇 संध्या अर्घ्य</h3>
+            <p id="ghatDescription">
+                छठ व्रती डूबते सूर्य को अर्घ्य अर्पित करते हैं।
+            </p>
+        </section>
+        <!-- Gallery -->
+        <section class="section reveal">
+            <span class="section-tag">📸 यादगार पल</span>
+            <h2>छठ पूजा Gallery</h2>
+
+            <div class="gallery">
+                <img src="photo1.png" alt="सूर्य को अर्घ्य" class="gallery-img">
+                <img src="photo2.png" alt="पूजा की टोकरी" class="gallery-img">
+                <img src="photo3.png" alt="छठ पूजा प्रसाद" class="gallery-img">
+                <img src="photo4.png" alt="दीपों से सजा घाट" class="gallery-img">
+            </div>
+        </section>
+        <section id="gallery" class="section tinted">
+            <span class="eyebrow">यादगार पल</span>
+            <h2>छठ पूजा फोटो गैलरी</h2>
+            <label class="upload">📷 फोटो चुनें <input type="file" id="photoInput" accept="image/*" multiple></label>
+            <div id="uploadedPhotos" class="gallery-grid"></div>
+        </section>
+
+
+        <!-- Image Lightbox -->
+        <div id="lightbox" class="lightbox hidden">
+            <button id="closeLightbox" class="close-btn">✕</button>
+            <button id="prevImage" class="lightbox-arrow">❮</button>
+            <img id="lightboxImage" src="" alt="बड़ी तस्वीर">
+            <button id="nextImage" class="lightbox-arrow">❯</button>
+        </div>
+
+        <!-- Chhath Story -->
+        <section class="section story-section reveal">
+            <span class="section-tag">📖 धार्मिक परंपरा</span>
+            <h2>छठ पूजा की कथा और परंपरा</h2>
+
+            <details>
+                <summary>छठ पूजा की कथा पढ़ें</summary>
+                <p>
+                    छठ पूजा सूर्य देव और छठी मैया की उपासना का प्राचीन लोकपर्व है।
+                    अलग-अलग क्षेत्रों में इससे जुड़ी अनेक लोककथाएँ और मान्यताएँ
+                    प्रचलित हैं। भक्त श्रद्धा से व्रत रखते हैं, प्रसाद बनाते हैं
+                    और सूर्य को अर्घ्य देकर परिवार की सुख-समृद्धि की कामना करते हैं।
+                </p>
+            </details>
+
+            <details>
+                <summary>छठ पूजा की मुख्य परंपराएँ</summary>
+                <p>
+                    स्वच्छता, सात्विकता, उपवास, प्रसाद और नदी या जलाशय के किनारे
+                    सूर्य को अर्घ्य देना इस पर्व की प्रमुख परंपराएँ हैं।
+                </p>
+            </details>
+        </section>
+
+        <!-- Daily Message -->
+        <section class="section message-section reveal">
+            <span class="section-tag">🌸 आज का संदेश</span>
+            <h2>आज का छठ संदेश</h2>
+            <p id="dailyMessage" class="daily-message">
+                छठी मैया सभी के जीवन में सुख और शांति लाएँ।
+            </p>
+            <button id="newMessageBtn" class="secondary-btn">
+                नया संदेश देखें
+            </button>
+        </section>
+
+        <!-- Greeting Card Generator -->
+        <section class="section reveal">
+            <span class="section-tag">🎁 शुभकामना</span>
+            <h2>अपना Greeting Card बनाएँ</h2>
+
+            <input type="text" id="userName" placeholder="अपना नाम लिखें" maxlength="30">
+
+            <button id="makeCardBtn" class="primary-btn">
+                कार्ड बनाएँ
+            </button>
+
+            <div id="cardPreview" class="card-preview hidden">
+                <div class="card-sun">☀️</div>
+                <h2>जय छठी मैया</h2>
+                <p>आपको और आपके परिवार को</p>
+                <h3>छठ महापर्व की हार्दिक शुभकामनाएँ</h3>
+                <p id="cardName">शुभकामनाएँ</p>
+                <div>🌸 🪔 🌼</div>
+            </div>
+
+            <button id="downloadCardBtn" class="secondary-btn hidden">
+                ⬇️ Greeting Card डाउनलोड करें
+            </button>
+        </section>
+
+        <!-- Share -->
+        <section class="section wishes-section reveal">
+            <span class="section-tag">💛 शुभकामनाएँ</span>
+            <h2>छठ महापर्व की हार्दिक शुभकामनाएँ</h2>
+            <p>
+                छठी मैया आपके परिवार को सुख, शांति, स्वास्थ्य
+                और समृद्धि प्रदान करें।
+            </p>
+            <button id="shareBtn" class="primary-btn">
+                WhatsApp पर शेयर करें
+            </button>
+        </section>
+
+        <!-- Fireworks Control -->
+        <section class="section reveal">
+            <h2>✨ उत्सव की रोशनी</h2>
+            <button id="fireworksBtn" class="primary-btn">
+                आतिशबाजी दिखाएँ
+            </button>
+            <p class="note">यह केवल स्क्रीन पर डिजिटल Animation है।</p>
+        </section>
+
+        <footer>
+            <h2>🌞 जय छठी मैया 🌞</h2>
+            <p>आप सभी को छठ महापर्व की हार्दिक शुभकामनाएँ।</p>
+            <p>श्रद्धा • सेवा • स्वच्छता • आस्था</p>
+        </footer>
+
+    </main>
+
+    <!-- Audio Elements -->
+    <audio id="bhajan" preload="none"></audio>
+
+    <audio id="bell" preload="none">
+        <source src="bell.mpeg" type="audio/mpeg">
+    </audio>
+
+    <audio id="shankh" preload="none">
+        <source src="sankh.mpeg" type="audio/mpeg">
+    </audio>
+
+    <!-- Card Download Canvas -->
+    <canvas id="cardCanvas" width="1000" height="700" class="hidden"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
